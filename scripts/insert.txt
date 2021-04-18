@@ -1,0 +1,639 @@
+INSERT INTO public.admin (id, firstname, surname, email, password, activation_code)
+VALUES (DEFAULT, 'Админ', 'Админов', 'admin@mail.com', '1234', null);
+
+
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Вычислительные системы');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Интеллектуальные мобильные приложения');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Разработка графических и веб-приложений');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Программисты с углубленной подготовкой по математике');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Программно-информационные системы');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Системное программное обеспечение');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Комплексная защита объектов информатизации');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Проектирование средств защиты информации');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Сетевые и облачные технологии');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Проектирование оптических систем');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Навигационные системы');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Экология');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Техническая маркетинговая документация');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Интеллектуальная робототехника');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Молекулярные пищевые технологии');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Информационные технологии в бизнесе');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Экономика высокотехнологичного бизнеса');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Видеоинформационные системы');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Вычислительная математика');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Теория вероятностей');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Философия');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'История');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Иностранные языки');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Психология и психосоматика');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Инфохимия');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Методы оптимизации');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Низкоуровневое программирование');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Линейная алгебра');
+
+
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Степан', 'Иконников', 'stefan@gmail.com', '1111', '9951331290', '7281-11', '2000-02-25', 7);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Искандер', 'Хисамов', 'hkhisamovtaiga@gmail.com', '2222', '9534075488', '7281-11', '2000-04-18', 4);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Алмас', 'Синев', 'almassinev@gmail.com', '3333', '9600860729', '7281-11', '2000-02-26', 3);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Екатерина', 'Ижеметьева', 'katyakatya@mail.ru', '4444', '9894658825', '7281-11', '2000-05-12', 13);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Дмитрий', 'Паравозов', 'paravozov@mail.ru', '5555', '9601234576', '6813-12', '2000-07-20', 24);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Владимир', 'Центральный', 'centervlad@mail.ru', '6666', '9314275510', '6813-13', '2000-03-03', 7);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Мария', 'Маркова', 'mashamarkova@gmail.com', '7777', '9073571942', '3269-03', '2000-01-24', 8);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Альберт', 'Аллабердин', 'alall@yandex.ru', '8888', '9013469284', '8931-31', '2000-11-20', 3);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Борис', 'Добров', 'borisdobro@mail.ru', '9999', '9660458293', '7282-12', '2000-04-05', 7);
+
+INSERT INTO public.student (id, firstname, surname, email, password, phone, "group", birthday, specialization_id)
+VALUES (DEFAULT, 'Глеб', 'Ахметзянов', 'ahmetzyanovgleb@mail.ru', '0000', '9047474321', '8931-31', '2000-01-01', 7);
+
+
+
+INSERT INTO public.document (id, doc_code, is_taken)
+VALUES (DEFAULT, 'AS8HDO28DN', true);
+
+INSERT INTO public.document (id, doc_code, is_taken)
+VALUES (DEFAULT, 'D27H392D23', true);
+
+INSERT INTO public.document (id, doc_code, is_taken)
+VALUES (DEFAULT, 'AD32D293JD', true);
+
+INSERT INTO public.document (id, doc_code, is_taken)
+VALUES (DEFAULT, 'E387HD2832', false);
+
+INSERT INTO public.document (id, doc_code, is_taken)
+VALUES (DEFAULT, 'D2NC920DSC', false);
+
+INSERT INTO public.document (id, doc_code, is_taken)
+VALUES (DEFAULT, 'VSVJ294NV2', false);
+
+
+
+INSERT INTO public.teacher (id, firstname, surname, email, password, phone, birthday, document_id)
+VALUES (DEFAULT, 'Илон', 'Масков', 'spacexleader@gmail.com', '1234', '9142568686', '1980-08-14', 2);
+
+INSERT INTO public.teacher (id, firstname, surname, email, password, phone, birthday, document_id)
+VALUES (DEFAULT, 'Александр', 'Укашенко', 'mybelarus@mail.su', '1235', '9174265812', '1994-11-24', 3);
+
+INSERT INTO public.teacher (id, firstname, surname, email, password, phone, birthday, document_id)
+VALUES (DEFAULT, 'Алексей', 'Лалальный', 'forkineyesor@mail.ru', '1233', '9600667686', '1960-03-10', 1);
+
+
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id)
+VALUES (DEFAULT, 'Изучение IOS', 1,
+        'Мы познакомимся с основами разработки под устройства IOS и научимся элементам ui-design.', 3, 3);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id)
+VALUES (DEFAULT, 'Программирование на unix-системах', 2,
+        'Это вводный курс в администрирование на linux. За курс вы сможете самостоятельно сделать из вашего старого компьютера неплохой сервер для доступа к данным с любой точки мира с отличной защитой и сертификатом.',
+        2, 7);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id)
+VALUES (DEFAULT, 'Web-приложение на Spring', 3,
+        'В этом курсе мы с вами разработаем полноценное самостоятельное web-приложение используя базу данных и Spring фреймворк на языке Java. При завершении разработки мы выгрузим ее на виртульный сервер.',
+        1, 4);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id)
+VALUES (DEFAULT, 'Глобальная защита экологии', 1,
+        'Природе становится все хуже и хуже с каждым днем. Мы изучим, какие есть новые технологии в области защиты природы, от чего вымрет 95% растений и зачем нужно носить кепки.',
+        1, 13);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id)
+VALUES (DEFAULT, 'Разработка в Android Studio', 2,
+        'Android Studio - программа для создания приложений для android смартфонов. Она имеет собственный пакет инструментов(SDK) с  помощью которого разработка современных оптмимизированных приложений становится достаточно легкой для всех. ',
+        3, 3);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id)
+VALUES (DEFAULT, 'Знакомство с Kali Linux', 3,
+        'Kali -Linux - один из лучших дистрибутивов Linux для работы с информационной безопасностью. В течении курса вы освоите основные инструменты "белой шляпы" и познакомитесь с инструментарием "черных шляп".',
+        2, 8);
+
+
+
+INSERT INTO public.forum (id, course_id, name, description, create_date)
+VALUES (DEFAULT, 3, 'Часто обсуждаемые вопросы',
+				        'В этом форуме вы можете задавать свои вопросы, на что я(ваш преподаватель) отвечу по возможности. ',
+				        '2021-04-17');
+
+INSERT INTO public.forum (id, course_id, name, description, create_date)
+VALUES (DEFAULT, 5, 'Связь с преподавателем', 'Форум на случай форс мажорных ситуаций', '2021-04-15');
+
+
+
+INSERT INTO public.message (id, student_id, teacher_id, text, date, forum_id)
+VALUES (DEFAULT, 3, null,
+				        'Здравствуйте. Могу ли я использовать Postgresql в качестве БД?', '2021-04-18',
+				        1);
+
+
+INSERT INTO public.message (id, student_id, teacher_id, text, date, forum_id)
+VALUES (DEFAULT, 3, null,
+				        'Я не успел сдать ЛР_03, могу ли я сдать ее вместе с ЛР_04?', '2021-04-18',
+				        1);
+
+
+INSERT INTO public.message (id, student_id, teacher_id, text, date, forum_id)
+VALUES (DEFAULT, null, 3,
+				        'Добрый день! Да, конечно, можете использовать любую базу данных, которой умеете пользоваться.', '2021-04-18',
+				        1);
+
+
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 1, 3);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 1, 13);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 1, 22);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 2, 4);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 2, 3);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 3, 4);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 3, 12);
+
+INSERT INTO public.teachers_specializations (id, teacher_id, specialization_id)
+VALUES (DEFAULT, 3, 8);
+
+
+
+INSERT INTO public.question_category (id, category_name)
+VALUES (DEFAULT, 'POL');
+
+INSERT INTO public.question_category (id, category_name)
+VALUES (DEFAULT, 'CHL');
+
+INSERT INTO public.question_category (id, category_name)
+VALUES (DEFAULT, 'UPR');
+
+
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'С несколькими ответами');
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'С одним ответом');
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'Ответ в виде строки');
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'На соответствие ');
+
+
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Тема 1', null, 4, 'theme1.doc schema.jpg');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Тема 2', 'Тема 2', 4, null);
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Зачет', 'Тест для проверки знаний', 4, null);
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Введение', 'Здесь четкое обьяснение как правильно установить Android Studio', 5,
+								        'start_tutorial.doc start_page.png main_page.png');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Лабораторная работа №1', 'Создайте android приложение, выводящее приветсвие и ваше имя.', 5, null);
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Основные элементы интерфейса Android приложений',
+								        'В этой теме мы разберем часто используемые элементы, такие как Image, TextView, EditText, View, Button, Checkbox и другие.',
+								        5, 'lesson3.pdf');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Знакомство с ui-design', null, 1, 'ui_design.doc');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Первое приложение IOS', 'Создайте helloworld приложение для IOS', 1, null);
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Установка Ubuntu', null, 2, 'start_ubuntu.pdf');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Controller и SpringConfig',
+								        'Создайте первое Spring приложение, в котором будут такие аннотации как Controller и Configuration', 3,
+								        'controllers.doc');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Инструменты kali', 'Мы познакомимся с aircrack-ng и ike-scan.', 6, 'aircrack.pdf ikescan.pdf');
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames)
+VALUES (DEFAULT, 'Лабораторная работа 1',
+								        'Выберите СВОЮ wifi сеть и проведите атаку на одного из пользователей ВАШЕЙ СЕТИ пакетами с помощью aircrack-ng так, чтобы ему пришлось переподключиться к сети, тем самым передав вам ключ и зашиврофанный пароль.',
+								        6, null);
+
+
+
+INSERT INTO public.task (id, name, description, theme_id, docs_filenames, max_rating)
+VALUES (DEFAULT, 'ЛР №1 Android разработка', 'Создайте android приложение, выводящее приветсвие и ваше имя.', 5,
+												        'android_firstapp.doc', 4);
+
+INSERT INTO public.task (id, name, description, theme_id, docs_filenames, max_rating)
+VALUES (DEFAULT, 'Первое приложение на IOS', 'Создайте helloworld приложение для IOS', 8, null, 4);
+
+INSERT INTO public.task (id, name, description, theme_id, docs_filenames, max_rating)
+VALUES (DEFAULT, 'Лабораторная работа №1',
+												        'Создайте первое Spring приложение, в котором будут такие аннотации как Controller и Configuration', 10,
+												        'task01.doc about_contr.doc', 2);
+
+INSERT INTO public.task (id, name, description, theme_id, docs_filenames, max_rating)
+VALUES (DEFAULT, 'ЛР №1 Aircrack-ng',
+												        'Выберите СВОЮ wifi сеть и проведите атаку на одного из пользователей ВАШЕЙ СЕТИ пакетами с помощью aircrack-ng так, чтобы ему пришлось переподключиться к сети, тем самым передав вам ключ и зашиврофанный пароль.',
+												        12, null, 5);
+
+
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 1, 1, '2021-04-18',
+																        'Выгрузил свою работу на Github под именем firstlab. Вот ссылка: https://github.com/GunterXR', null);
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 1, 2, '2021-04-17', null, 'ЛР_1.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 1, 3, '2021-04-18', 'Извините за опоздание', 'ЛР_1.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 1, 9, '2021-04-18', null, 'ЛР_01.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 2, 4, '2021-04-16', null, 'task.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 3, 1, '2021-04-14', 'Дополнительно: добавил Spring Security', 'web01.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 3, 2, '2021-04-03', null, 'ЛР_1.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 4, 3, '2021-04-18', null, 'ЛР_1.doc');
+
+INSERT INTO public.answer_to_the_task (id, task_id, student_id, date, comment, docs_filenames)
+VALUES (DEFAULT, 4, 2, '2021-04-15', null, 'aircrackTask.doc');
+
+
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 1, 1);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 2, 1);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 3, 1);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 4, 1);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 9, 1);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 5, 1);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 4, 2);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 7, 2);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 10, 2);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 1, 3);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 2, 3);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 6, 3);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 3, 3);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 3, 4);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 2, 4);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 6, 4);
+
+
+
+INSERT INTO public.task_answer_rating (id, teacher_id, student_id, date, point, comment, answer_to_the_task_id)
+VALUES (DEFAULT, 2, 3, '2021-04-18', 2, null, 1);
+
+INSERT INTO public.task_answer_rating (id, teacher_id, student_id, date, point, comment, answer_to_the_task_id)
+VALUES (DEFAULT, 2, 2, '2021-04-18', 2, null, 1);
+
+INSERT INTO public.task_answer_rating (id, teacher_id, student_id, date, point, comment, answer_to_the_task_id)
+VALUES (DEFAULT, 1, 4, '2021-04-18', 0.5, 'Переделайте и отправьте заново.', 2);
+
+INSERT INTO public.task_answer_rating (id, teacher_id, student_id, date, point, comment, answer_to_the_task_id)
+VALUES (DEFAULT, 3, 1, '2021-04-18', 2, null, 3);
+
+INSERT INTO public.task_answer_rating (id, teacher_id, student_id, date, point, comment, answer_to_the_task_id)
+VALUES (DEFAULT, 3, 3, '2021-04-18', 2, null, 4);
+
+
+
+INSERT INTO public.test (id, name, description, theme_id, max_rating)
+VALUES (DEFAULT, 'Зачет', 'Заключительный тест для проверки ваших знаний.', 3, 10);
+
+
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Кислород в атмосфере Земли составляет __________________ её объёма.', 2, 1, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Вопросы, связанные с ущербом нанесенным хозяйственной деятельностью природной среде,
+изложены в:', 1, 1, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT,
+        'В значительной мере на процесс климатообразования, на поддержание в состоянии равновесия основных частей атмосферы влияет:',
+        2, 2, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Кто изображен на картинке?', 1, 2, 'animals.png', 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Объектами изучения экологии являются:', 2, 3, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Основную массу гидросферы содержит:', 2, 3, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT,
+        'Природный комплекс, образованный живыми организмами и средой их обитания, в которой живые и косные элементы связаны между собой обменом веществ и энергией это...',
+        3, 3, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Для кислотных растворов pH < __________________.', 2, 2, null, 1, 0.5);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Высшая стадия эволюции биосферы, в котором ведущую роль играет человек — это:', 2, 1, null, 1, 0.5);
+
+INSERT INTO public.question (id, question_text, type_id, categoty_id, docs_filenames, test_id, max_rating)
+VALUES (DEFAULT, 'Термин «экология» ввел: ', 3, 1, null, 1, 2);
+
+
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '40%', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '10%', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '20%', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '30%', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'реки', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'море', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'океан', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'лес', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 5, 'Экосистемы', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 5, 'живое вещество', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 5, 'вредные выбросы', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 5, 'природа', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 6, 'вода рек и озер континентов', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 6, 'подземная вода', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 6, 'лед Антарктиды, Гренландии', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 6, 'мировой океан', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, '5', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, '3', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, '7', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, '8', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 7, 'Экологическая система', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 9, 'ноосфера', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 9, 'гидросфера', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 9, 'литосфера', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 9, 'озоносфера', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 10, 'Геккель', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'ФЗ «О промышленной безопасности опасных производственных объектов»', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'ФЗ «Об охране окружающей среды', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'Ф3 неправильный ответ', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'Ф3 другой неправильный ответ', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'Питон', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'Еж', null, false);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'Карась', null, true);
+
+INSERT INTO public.answer_to_the_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'Ворон', null, true);
+
+
+
+INSERT INTO public.test_rating (id, test_id, point, student_id)
+VALUES (DEFAULT, 1, 8.5, 3);
+
+INSERT INTO public.test_rating (id, test_id, point, student_id)
+VALUES (DEFAULT, 1, 8, 2);
+
+
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 3, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 16, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 26, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 27, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 7, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 19, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 9, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 28, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 21, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 2, 22, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 26, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 27, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 7, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 19, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 9, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 28, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 21, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 22, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 33, 1);
+
+INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
+VALUES (DEFAULT, 3, 34, 1);
