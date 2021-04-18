@@ -1,0 +1,59 @@
+SELECT firstname, surname, group_id, s.name AS spec_name FROM student join specialization s on student.specialization_id = s.id;
+
+
+SELECT level, name,
+    concat(t.firstname, ' ', t.surname) as teacher,
+        concat(s.firstname, ' ', s.surname) FROM course
+            join teacher t on course.teacher_id = t.id
+                join students_courses sc on course.id = sc.course_id
+                    join student s on sc.student_id = s.id;
+
+
+SELECT level, name,
+    concat(t.firstname, ' ', t.surname) as teacher,
+        concat(s.firstname, ' ', s.surname) FROM course
+            join teacher t on course.teacher_id = t.id
+                join students_courses sc on course.id = sc.course_id
+                    join student s on sc.student_id = s.id where sc.course_id = 1;
+
+
+SELECT concat(t.firstname, ' ', t.surname) as teacher, concat(s.firstname, ' ', s.surname), t2.name as task_name, point
+    FROM task_answer_rating
+        join teacher t on t.id = task_answer_rating.teacher_id
+            join answer_to_the_task attt on attt.id = task_answer_rating.answer_to_the_task_id
+                join student s on s.id = attt.student_id
+                    join task t2 on attt.task_id = t2.id where s.id = 1;
+
+
+SELECT concat(t.firstname, ' ', t.surname), course.name, course.level, s.name as spec_name FROM course
+    join teacher t on course.teacher_id = t.id
+        join specialization s on course.specialization_id = s.id
+            where teacher_id = 2;
+
+
+SELECT s.name as spec_name, course.name  from course
+    join specialization s on course.specialization_id = s.id ORDER BY s.name;
+
+
+SELECT q.question_text, ans.answer_text FROM answer_to_the_question ans
+    join question q on ans.question_id = q.id where ans.is_correct = true;
+
+
+SELECT concat(s.firstname, ' ', s.surname), q.question_text, attq.answer_text as student_answer, attq.is_correct FROM students_answers_tests
+  JOIN answer_to_the_question attq on students_answers_tests.answer_id = attq.id
+    join student s on s.id = students_answers_tests.student_id
+      join question q on attq.question_id = q.id where s.id = 3;
+
+
+SELECT concat(firstname, ' ', surname), group_id FROM student where group_id = '7281-11';
+
+
+SELECT sum(q.max_rating) from students_answers_tests
+    join answer_to_the_question attq on students_answers_tests.answer_id = attq.id
+        join question q on attq.question_id = q.id where attq.is_correct = true and students_answers_tests.student_id = 2;
+
+
+SELECT concat(s.firstname, ' ', s.surname), text, date FROM message
+    join forum f on message.forum_id = f.id
+        join course c on c.id = f.course_id
+            join student s on message.student_id = s.id where message.student_id IS NOT NULL;

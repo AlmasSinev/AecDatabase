@@ -637,3 +637,8 @@ VALUES (DEFAULT, 3, 33, 1);
 
 INSERT INTO public.students_answers_tests (id, student_id, answer_id, test_id)
 VALUES (DEFAULT, 3, 34, 1);
+
+
+UPDATE public.task_answer_rating
+SET answer_to_the_task_id = 6
+WHERE id = 1;

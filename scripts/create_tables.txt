@@ -397,3 +397,6 @@ create unique index teachers_specializations_id_uindex
 alter table teachers_specializations
 		add constraint teachers_specializations_pk
 				primary key (id);
+
+
+alter table student rename column "group" to group_id;
