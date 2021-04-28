@@ -186,3 +186,161 @@ alter table teacher drop column specialization_id;
 		        REFERENCES specialization (id)
 		        ON DELETE CASCADE
 		        ON UPDATE CASCADE ;
+
+
+
+ALTER TABLE document
+    ADD FOREIGN KEY (teacher_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+
+ALTER TABLE groups
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+
+
+
+        create table user_roles
+        (
+        	id int,
+        	role varchar,
+        	user_id int
+        );
+
+
+        create sequence user_roles_id_seq;
+
+        alter table user_roles alter column id set not null;
+
+        alter table user_roles alter column id set default nextval('public.user_roles_id_seq');
+
+        alter sequence user_roles_id_seq owned by user_roles.id;
+
+        create unique index user_roles_id_uindex
+        	on user_roles (id);
+
+        alter table user_roles
+        	add constraint user_roles_pk
+        		primary key (id);
+
+
+        alter table document
+        	add teacher_id int;
+
+
+
+        	create table groups
+        (
+        	id serial not null,
+        	student_id int,
+        	group_id varchar
+        );
+
+        create unique index groups_id_uindex
+        	on groups (id);
+
+        alter table groups
+        	add constraint groups_pk
+        		primary key (id);
+
+
+        alter table teachers_specializations rename to users_specializations;
+
+        alter table users_specializations rename column teacher_id to user_id;
+
+        alter table users_specializations drop constraint teachers_specializations_teacher_id_fkey;
+
+        alter table users_specializations
+        	add constraint teachers_specializations_teacher_id_fkey
+        		foreign key (user_id) references users
+        			on update cascade on delete cascade;
+
+
+
+
+        alter table message
+        	add user_id int;
+
+        alter table message drop constraint message_student_id_fkey;
+
+        alter table message drop column student_id;
+
+        alter table message
+        	add constraint message_user_id_fkey
+        		foreign key (user_id) references users
+        			on update cascade on delete cascade;
+
+        alter table message drop constraint message_teacher_id_fkey;
+
+        alter table message drop column teacher_id;
+
+
+        alter table answer_to_the_task drop constraint answer_to_the_task_student_id_fkey;
+
+        alter table answer_to_the_task
+        	add constraint answer_to_the_task_student_id_fkey
+        		foreign key (student_id) references users
+        			on update cascade on delete cascade;
+
+
+
+        alter table course drop constraint course_teacher_id_fkey;
+
+        alter table course
+        				add constraint course_teacher_id_fkey
+        					foreign key (teacher_id) references users
+        						on update cascade on delete cascade;
+
+
+        alter table course_rating drop constraint course_rating_student_id_fkey;
+
+        alter table course_rating
+        	add constraint course_rating_student_id_fkey
+        		foreign key (student_id) references users
+        			on update cascade on delete cascade;
+
+
+        alter table students_answers_tests drop constraint students_answers_tests_student_id_fkey;
+
+        alter table students_answers_tests
+        	add constraint students_answers_tests_student_id_fkey
+        		foreign key (student_id) references users
+        			on update cascade on delete cascade;
+
+
+        alter table students_courses drop constraint students_courses_student_id_fkey;
+
+        alter table students_courses
+        	add constraint students_courses_student_id_fkey
+        		foreign key (student_id) references users
+        			on update cascade on delete cascade;
+
+
+
+        alter table task_answer_rating drop constraint task_answer_rating_teacher_id_fkey;
+
+        alter table task_answer_rating
+        	add constraint task_answer_rating_teacher_id_fkey
+        		foreign key (teacher_id) references users
+        			on update cascade on delete cascade;
+
+        alter table task_answer_rating drop constraint task_answer_rating_student_id_fkey;
+
+        alter table task_answer_rating drop column student_id;
+
+
+        alter table test_rating drop constraint test_rating_student_id_fkey;
+
+        alter table test_rating
+        	add constraint test_rating_student_id_fkey
+        		foreign key (student_id) references users
+        			on update cascade on delete cascade;
+
+
+        			drop table student;
+        			drop table teacher;

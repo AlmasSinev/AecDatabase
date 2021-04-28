@@ -1,53 +1,35 @@
-create table admin
-(
-	id serial not null,
-	firstname varchar,
-	surname varchar,
-	email varchar,
-	password varchar
-);
-
-create unique index admin_id_uindex
-	on admin (id);
-
-alter table admin
-	add constraint admin_pk
-		primary key (id);
-
-alter table admin
-	add activation_code varchar;
 
 
 create table course
 (
-	id serial not null,
-	name varchar,
-	teacher_id int,
-	description varchar,
-  level int,
-  specialization_id int
+    id serial not null,
+    name varchar,
+    teacher_id int,
+    description varchar,
+    level int,
+    specialization_id int
 );
 
 create unique index course_id_uindex
-	on course (id);
+    on course (id);
 
 alter table course
-	add constraint course_pk
-		primary key (id);
+    add constraint course_pk
+        primary key (id);
 
 
 create table specialization
 (
-  id serial not null,
-  name varchar
+    id serial not null,
+    name varchar
 );
 
 create unique index specialization_id_uindex
-  on specialization (id);
+    on specialization (id);
 
 alter table specialization
-  add constraint specialization_pk
-    primary key (id);
+    add constraint specialization_pk
+        primary key (id);
 
 
 create table theme
@@ -63,8 +45,8 @@ create unique index theme_id_uindex
     on theme (id);
 
 alter table theme
-  add constraint theme_pk
-    primary key (id);
+    add constraint theme_pk
+        primary key (id);
 
 
 create table task
@@ -73,18 +55,18 @@ create table task
     name varchar,
     description varchar,
     theme_id int,
-    docs_filenames int
+    docs_filenames varchar
 );
 
 create unique index task_id_uindex
-  on task (id);
+    on task (id);
 
 alter table task
-  add constraint task_pk
-    primary key (id);
+    add constraint task_pk
+        primary key (id);
 
 alter table task
-  add max_rating float;
+    add max_rating float;
 
 create table answer_to_the_task
 (
@@ -105,21 +87,21 @@ alter table answer_to_the_task
         primary key (id);
 
 
-				create table answer_to_the_question
-				(
-				    id serial not null,
-				    question_id int,
-				    answer_text varchar,
-				    docs_filenames varchar,
-				    is_correct boolean
-				);
+create table answer_to_the_question
+(
+    id serial not null,
+    question_id int,
+    answer_text varchar,
+    docs_filenames varchar,
+    is_correct boolean
+);
 
-				create unique index answer_to_the_question_id_uindex
-				    on answer_to_the_question (id);
+create unique index answer_to_the_question_id_uindex
+    on answer_to_the_question (id);
 
-				alter table answer_to_the_question
-				    add constraint answer_to_the_question_pk
-				        primary key (id);
+alter table answer_to_the_question
+    add constraint answer_to_the_question_pk
+        primary key (id);
 
 
 create table " rating"
@@ -136,8 +118,8 @@ create unique index " rating_id_uindex"
     on " rating" (id);
 
 alter table " rating"
-  add constraint " rating_pk"
-    primary key (id);
+    add constraint " rating_pk"
+        primary key (id);
 
 alter table " rating"
     add answer_to_the_task_id int;
@@ -155,17 +137,17 @@ create table test
 );
 
 create unique index test_id_uindex
-  on test (id);
+    on test (id);
 
 alter table test
-  add constraint test_pk
-    primary key (id);
+    add constraint test_pk
+        primary key (id);
 
 alter table test
-	add theme_id int;
+    add theme_id int;
 
 alter table test
-	add max_rating float;
+    add max_rating float;
 
 
 create table question
@@ -181,33 +163,33 @@ create unique index question_id_uindex
     on question (id);
 
 alter table question
-  add constraint question_pk
-    primary key (id);
+    add constraint question_pk
+        primary key (id);
 
 alter table question
-	add max_rating float;
+    add max_rating float;
 
 
 create table test_rating
 (
-	id serial not null,
-	test_id int,
-	point float,
-	student_id int
+    id serial not null,
+    test_id int,
+    point float,
+    student_id int
 );
 
 create unique index test_rating_id_uindex
-	on test_rating (id);
+    on test_rating (id);
 
 alter table test_rating
-	add constraint test_rating_pk
-		primary key (id);
+    add constraint test_rating_pk
+        primary key (id);
 
 
 create table question_type
 (
-  id int,
-  type_name varchar
+    id int,
+    type_name varchar
 );
 
 create sequence question_type_id_seq;
@@ -219,25 +201,25 @@ alter table question_type alter column id set default nextval('public.question_t
 alter sequence question_type_id_seq owned by question_type.id;
 
 create unique index question_type_id_uindex
-	on question_type (id);
+    on question_type (id);
 
 alter table question_type
-	add constraint question_type_pk
-		primary key (id);
+    add constraint question_type_pk
+        primary key (id);
 
 
 create table question_category
 (
-	id serial not null,
-	category_name varchar
+    id serial not null,
+    category_name varchar
 );
 
 create unique index question_category_id_uindex
-	on question_category (id);
+    on question_category (id);
 
 alter table question_category
-	add constraint question_category_pk
-		primary key (id);
+    add constraint question_category_pk
+        primary key (id);
 
 alter table question rename column type to type_id;
 
@@ -254,166 +236,166 @@ alter table question rename column max_rating to test_id;
 alter table question alter column test_id type int using test_id::int;
 
 alter table question
-	add max_rating float;
+    add max_rating float;
 
 
 create table document
 (
-	id serial not null,
-	doc_code varchar,
-	is_taken boolean
+    id serial not null,
+    doc_code varchar,
+    is_taken boolean
 );
 
 create unique index document_id_uindex
-	on document (id);
+    on document (id);
 
 alter table document
-	add constraint document_pk
-		primary key (id);
+    add constraint document_pk
+        primary key (id);
 
 
 create table teacher
 (
-	id serial not null,
-	firstname varchar,
-	surname varchar,
-	email varchar,
-	password varchar,
-	phone varchar,
-	birthday date,
-	specialization_id int,
-	document_id int
+    id serial not null,
+    firstname varchar,
+    surname varchar,
+    email varchar,
+    password varchar,
+    phone varchar,
+    birthday date,
+    specialization_id int,
+    document_id int
 );
 
 create unique index teacher_id_uindex
-	on teacher (id);
+    on teacher (id);
 
 alter table teacher
-	add constraint teacher_pk
-		primary key (id);
+    add constraint teacher_pk
+        primary key (id);
 
 
 create table student
 (
-	id serial not null,
-	firstname varchar,
-	surname varchar,
-	email varchar,
-	password varchar,
-	phone varchar,
-	"group" varchar,
-	birthday date,
-	specialization_id int
+    id serial not null,
+    firstname varchar,
+    surname varchar,
+    email varchar,
+    password varchar,
+    phone varchar,
+    "group" varchar,
+    birthday date,
+    specialization_id int
 );
 
 create unique index student_id_uindex
-	on student (id);
+    on student (id);
 
 alter table student
-	add constraint student_pk
-		primary key (id);
+    add constraint student_pk
+        primary key (id);
 
 
 create table students_courses
 (
-	id serial not null,
-	student_id int,
-	course_id int
+    id serial not null,
+    student_id int,
+    course_id int
 );
 
 create unique index students_courses_id_uindex
-	on students_courses (id);
+    on students_courses (id);
 
 alter table students_courses
-	add constraint students_courses_pk
-		primary key (id);
+    add constraint students_courses_pk
+        primary key (id);
 
 
 create table forum
 (
-	id serial not null,
-	course_id int,
-	name varchar,
-	description varchar,
-	create_date date
+    id serial not null,
+    course_id int,
+    name varchar,
+    description varchar,
+    create_date date
 );
 
 create unique index forum_id_uindex
-	on forum (id);
+    on forum (id);
 
 alter table forum
-	add constraint forum_pk
-		primary key (id);
+    add constraint forum_pk
+        primary key (id);
 
 
 create table message
 (
-	id serial not null,
-	student_id int,
-	teacher_id int,
-	text varchar,
-	date date
+    id serial not null,
+    student_id int,
+    teacher_id int,
+    text varchar,
+    date date
 );
 
 create unique index message_id_uindex
-	on message (id);
+    on message (id);
 
 alter table message
-	add constraint message_pk
-		primary key (id);
+    add constraint message_pk
+        primary key (id);
 
 alter table message
-  add forum_id int;
+    add forum_id int;
 
 
 create table course_rating
 (
-	id serial not null,
-	student_id int,
-	course_id int,
-	pol_score float,
-	chl_score float,
-	upr_score float,
-	global_score float
+    id serial not null,
+    student_id int,
+    course_id int,
+    pol_score float,
+    chl_score float,
+    upr_score float,
+    global_score float
 );
 
 create unique index course_rating_id_uindex
-	on course_rating (id);
+    on course_rating (id);
 
 alter table course_rating
-	add constraint course_rating_pk
-		primary key (id);
+    add constraint course_rating_pk
+        primary key (id);
 
 
 create table students_answers_tests
 (
-	id serial not null,
-	student_id int,
-	answer_id int,
-	test_id int
+    id serial not null,
+    student_id int,
+    answer_id int,
+    test_id int
 );
 
 create unique index students_answers_tests_id_uindex
-	on students_answers_tests (id);
+    on students_answers_tests (id);
 
 alter table students_answers_tests
-	add constraint students_answers_tests_pk
-		primary key (id);
+    add constraint students_answers_tests_pk
+        primary key (id);
 
 
 create table teachers_specializations
 (
-	  id serial not null,
-		teacher_id int,
-		specialization_id int
+    id serial not null,
+    teacher_id int,
+    specialization_id int
 );
 
 create unique index teachers_specializations_id_uindex
-		on teachers_specializations (id);
+    on teachers_specializations (id);
 
 alter table teachers_specializations
-		add constraint teachers_specializations_pk
-				primary key (id);
+    add constraint teachers_specializations_pk
+        primary key (id);
 
 
 alter table student rename column "group" to group_id;
@@ -421,18 +403,18 @@ alter table student rename column "group" to group_id;
 
 create table users
 (
-	id serial not null,
-	firstname varchar,
-	surname varchar,
-	email varchar,
-	password varchar,
-	phone varchar,
-	birthday date
+    id serial not null,
+    firstname varchar,
+    surname varchar,
+    email varchar,
+    password varchar,
+    phone varchar,
+    birthday date
 );
 
 create unique index user_id_uindex
-	on users (id);
+    on users (id);
 
 alter table users
-	add constraint user_pk
-		primary key (id);
+    add constraint user_pk
+        primary key (id);

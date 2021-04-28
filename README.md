@@ -5,13 +5,13 @@
 Но если вам кажется, что можно в каких то местах убрать, добавить или изменить - напишите, я признаю, что могу сделать не супер оптимизированную базу.
 
 Основная схема:
-![alt text](uploads/db_09.png  "Главная схема")​
+![alt text](uploads/db_updated.png  "Главная схема")​
 
 Качество желает лучшего, поэтому я здесь же приложу несколько скринов отельных ее частей, чтобы увидеть мелкие детали.
-![alt text](uploads/db_teacher_course.png  "Главная страница")​
-![alt text](uploads/db_test_theme_question_and_admin.png  "Тема вопросы и админка")​
-![alt text](uploads/db_student_rating.png  "Студент и с чем он связан")​
-![alt text](uploads/db_message_answerrating.png  "Сообщения и оценка ответа")​
+![alt text](uploads/db_left_top.png  "Главная страница")​
+![alt text](uploads/db_right_top.png  "Тема вопросы и админка")​
+![alt text](uploads/db_left_bottom.png  "Студент и с чем он связан")​
+![alt text](uploads/db_task.png  "Сообщения и оценка ответа")​
 
 
 В папке scripts есть весь код postgres для создания такой же базы в пару кликов.
