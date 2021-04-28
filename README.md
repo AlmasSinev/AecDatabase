@@ -8,10 +8,10 @@
 ![alt text](uploads/db_updated.png  "Главная схема")​
 
 Качество желает лучшего, поэтому я здесь же приложу несколько скринов отельных ее частей, чтобы увидеть мелкие детали.
-![alt text](uploads/db_left_top.png  "Главная страница")​
-![alt text](uploads/db_right_top.png  "Тема вопросы и админка")​
-![alt text](uploads/db_left_bottom.png  "Студент и с чем он связан")​
-![alt text](uploads/db_task.png  "Сообщения и оценка ответа")​
+![alt text](uploads/db_v2/db_left_top.png  "Главная страница")​
+![alt text](uploads/db_v2/db_right_top.png  "Тема вопросы и админка")​
+![alt text](uploads/db_v2/db_left_bottom.png  "Студент и с чем он связан")​
+![alt text](uploads/db_v2/db_task.png  "Сообщения и оценка ответа")​
 
 
 В папке scripts есть весь код postgres для создания такой же базы в пару кликов.
