@@ -91,7 +91,11 @@ create table course
 	teacher_id int not null,
 	description varchar,
 	level int check ( level > 0 and level < 9 ),
-	specialization_id int
+	specialization_id int,
+	max_pol_score double precision,
+	max_chl_score double precision,
+	max_upr_score double precision,
+	max_global_score double precision
 );
 
 create unique index course_id_uindex
@@ -160,7 +164,11 @@ create table theme
 	name varchar,
 	description varchar,
 	course_id int,
-	docs_filenames varchar
+	docs_filenames varchar,
+	max_pol_score double precision,
+	max_chl_score double precision,
+	max_upr_score double precision,
+	max_global_score double precision
 );
 
 create unique index theme_id_uindex
@@ -180,11 +188,7 @@ create table course_rating
 	pol_score double precision,
 	chl_score double precision,
 	upr_score double precision,
-	global_score double precision,
-	max_pol_score double precision,
-	max_chl_score double precision,
-	max_upr_score double precision,
-	max_global_score double precision
+	global_score double precision
 );
 
 create unique index course_rating_id_uindex
@@ -204,11 +208,7 @@ create table theme_rating
 	pol_score double precision,
 	chl_score double precision,
 	upr_score double precision,
-	global_score double precision,
-	max_pol_score double precision,
-	max_chl_score double precision,
-	max_upr_score double precision,
-	max_global_score double precision
+	global_score double precision
 );
 
 create unique index theme_rating_id_uindex
@@ -226,7 +226,11 @@ create table paragraph
 	description varchar,
 	name varchar,
 	theme_id int,
-	docs_filenames varchar
+	docs_filenames varchar,
+	max_pol_score double precision,
+	max_chl_score double precision,
+	max_upr_score double precision,
+	max_global_score double precision
 );
 
 create unique index paragraph_id_uindex
@@ -249,11 +253,7 @@ create table paragraph_rating
     pol_score double precision,
     chl_score double precision,
     upr_score double precision,
-    global_score double precision,
-    max_pol_score double precision,
-    max_chl_score double precision,
-    max_upr_score double precision,
-    max_global_score double precision
+    global_score double precision
 );
 
 create unique index paragraph_rating_id_uindex
