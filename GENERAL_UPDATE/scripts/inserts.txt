@@ -1,0 +1,534 @@
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Илон', 'Масков', 'elonmaskov@gmail.com', '1111', '1971-09-10');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Алексей', 'Лалальный', 'lalalnuy@mail.ru', '2222', '2021-05-14');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Петр', 'Вахрушев', 'vahrusha@mail.ru', '3333', '2021-09-02');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Степан', 'Иконников', 'stephan@gmail.com', '4444', '2000-02-25');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Искандер', 'Хисамов', 'hisamovstudio@gmail.com', '5555', '2000-04-08');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Алмас', 'Шакирзянов', '26almassinev@gmail.com', '6666', '2000-02-26');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Катя', 'Ижеметьева', 'ekaterinaijimetiva@mail.ru', '7777', '2000-05-12');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Рустам', 'Хафизов', 'hafiza@yandex.ru', '8888', '2000-11-16');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Руслан', 'Мухаметов', 'myha@yandex.ru', '9999', '1999-10-07');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Глеб', 'Ахметзянов', 'ahmetzyanovgleb@mail.ru', '0000', '2000-12-29');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Рената', 'Шаймухаметова', 'nataride@gmail.com', '1010', '2000-07-25');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Ильдар', 'Синев', 'iildarado@gmail.com', '2020', '2000-02-26');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Кирилл', 'Хрюшев', 'hrusha@mail.ru', '3030', '1999-03-10');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Андрей', 'Смиренко', 'smirenko@yandex.ru', '4040', '2000-06-02');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Маша', 'Маркова', 'mashamarkova@mail.ru', '5050', '2000-08-10');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Инсаф', 'Нуреев', 'nureeeeeeev@gmail.com', '6060', '2000-05-30');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Камиль', 'Рамалов', 'ramalend@mail.ru', '7070', '2000-10-19');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Раиль', 'Ратин', 'ratinrail@yandex.ru', '8080', '2000-07-05');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Борис', 'Суровов', 'surovovov@mail.ru', '9090', '1999-06-03');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Настя', 'Рикова', 'anastasi@mail.ru', '1234', '1999-09-15');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Алсу', 'Сабирова', 'sabirovalsy@gmail.com', '1235', '2000-06-25');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Марат', 'Ильясов', 'ilyasovmarat@mail.ru', '4321', '2000-12-18');
+
+INSERT INTO public.users (id, firstname, surname, email, passwd, birthday)
+VALUES (DEFAULT, 'Ильшат', 'Мухаметов', 'ilshatmuha@gmail.com', '1233', '2000-01-05');
+
+
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Иностранные языки');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Математика');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Гуманитарные науки');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Искусство и творчество');
+
+INSERT INTO public.specialization (id, name)
+VALUES (DEFAULT, 'Компьютерные технологии');
+
+
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'TEACHER', 1);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'TEACHER', 2);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'TEACHER', 3);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 4);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 5);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 6);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 7);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 8);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 9);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 10);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 11);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'ADMIN', 12);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 13);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 14);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 15);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 16);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 17);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 18);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 19);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 20);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 21);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 22);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'STUDENT', 23);
+
+INSERT INTO public.user_roles (id, role, user_id)
+VALUES (DEFAULT, 'TEACHER', 12);
+
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 1, 5);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 2, 2);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 3, 3);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 4, 2);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 5, 2);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 6, 2);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 7, 2);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 8, 2);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 9, 3);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 10, 3);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 11, 3);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 12, 3);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 13, 3);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 14, 5);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 15, 5);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 16, 5);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 17, 5);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 18, 5);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 19, 1);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 20, 1);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 21, 4);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 22, 4);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 23, 4);
+
+INSERT INTO public.users_specializations (id, user_id, specialization_id)
+VALUES (DEFAULT, 1, 2);
+
+
+
+INSERT INTO public.document (id, doc_code, is_taken, teacher_id)
+VALUES (DEFAULT, 'S0932JBD2C', true, 1);
+
+INSERT INTO public.document (id, doc_code, is_taken, teacher_id)
+VALUES (DEFAULT, 'D208D4B4F2', true, 2);
+
+INSERT INTO public.document (id, doc_code, is_taken, teacher_id)
+VALUES (DEFAULT, 'F2F2O49FND', true, 3);
+
+INSERT INTO public.document (id, doc_code, is_taken, teacher_id)
+VALUES (DEFAULT, '2F49N4F73F', DEFAULT, null);
+
+INSERT INTO public.document (id, doc_code, is_taken, teacher_id)
+VALUES (DEFAULT, '98346VFU48', DEFAULT, null);
+
+INSERT INTO public.document (id, doc_code, is_taken, teacher_id)
+VALUES (DEFAULT, 'F3204B75V6', DEFAULT, null);
+
+
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id, max_pol_score, max_chl_score,
+                           max_upr_score, max_global_score)
+VALUES (DEFAULT, 'Программирование на Python', 1, 'Курс по программированию на Python 3 с нуля.', 2, 5, null, null,
+        null, null);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id, max_pol_score, max_chl_score,
+                           max_upr_score, max_global_score)
+VALUES (DEFAULT, 'Вычислительная математика', 1,
+        'Теория численных методов решения типовых математических задач. Современная вычислительная математика включает в круг своих проблем изучение особенностей вычисления с применением компьютеров. ',
+        1, 2, null, null, null, null);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id, max_pol_score, max_chl_score,
+                           max_upr_score, max_global_score)
+VALUES (DEFAULT, 'Теория вероятностей', 2,
+        'Раздел математики, изучающий случайные события, случайные величины, их свойства и операции над ними.', 2, 2,
+        null, null, null, null);
+
+INSERT INTO public.course (id, name, teacher_id, description, level, specialization_id, max_pol_score, max_chl_score,
+                           max_upr_score, max_global_score)
+VALUES (DEFAULT, 'Обществознание', 3, 'Курс по основам общества и его составляющих.', 1, 3, null, null, null, null);
+
+
+
+INSERT INTO public.forum (id, course_id, name, description, create_date)
+VALUES (DEFAULT, 4, 'Вопросы по ДЗ', 'Пишите здесь свои вопросы по домашним заданиям.', '2021-05-03 04:59:37.795000');
+
+INSERT INTO public.forum (id, course_id, name, description, create_date)
+VALUES (DEFAULT, 4, 'Полезные ссылки', 'Здесь будут появлятся ссылки на полезные материалы.',
+        '2021-05-02 03:00:22.497000');
+
+
+INSERT INTO public.message (id, text, forum_id, user_id, send_date)
+VALUES (DEFAULT, 'Задание №2 - Ввод данных сделать через консоль или текстовый файл?', 1, 14,
+        '2021-05-03 05:04:54.265000');
+
+INSERT INTO public.message (id, text, forum_id, user_id, send_date)
+VALUES (DEFAULT, 'Тест №1 - Я смогу перепройти тест? У меня вылетел интернет', 1, 15, '2021-05-03 05:04:56.840000');
+
+INSERT INTO public.message (id, text, forum_id, user_id, send_date)
+VALUES (DEFAULT, 'Вы можете сделать ввод данных таким, каким считаете нужным.', 1, 1, '2021-05-08 05:04:59.775000');
+
+INSERT INTO public.message (id, text, forum_id, user_id, send_date)
+VALUES (DEFAULT, 'Задание №1 - Могу я усложнить за доп баллы?', 1, 16, '2021-05-20 09:05:04.192000');
+
+INSERT INTO public.message (id, text, forum_id, user_id, send_date)
+VALUES (DEFAULT, 'https://www.python.org/ - официальный сайт по python 3', 2, 1, '2021-05-03 05:05:12.402000');
+
+INSERT INTO public.message (id, text, forum_id, user_id, send_date)
+VALUES (DEFAULT, 'https://ru.stackoverflow.com/', 2, 1, '2021-05-04 05:05:16.889000');
+
+
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 4, 5);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 5, 5);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 6, 5);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 7, 5);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 8, 5);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 9, 6);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 10, 6);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 11, 6);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 23, 6);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 13, 6);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 14, 4);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 15, 4);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 16, 4);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 17, 4);
+
+INSERT INTO public.students_courses (id, student_id, course_id)
+VALUES (DEFAULT, 18, 4);
+
+
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames, max_pol_score, max_chl_score, max_upr_score,
+                          max_global_score)
+VALUES (DEFAULT, 'Тема №1', 'Начальные шаги изучения.', 4, null, null, null, null, null);
+
+INSERT INTO public.theme (id, name, description, course_id, docs_filenames, max_pol_score, max_chl_score, max_upr_score,
+                          max_global_score)
+VALUES (DEFAULT, 'Тема №2', null, 4, null, null, null, null, null);
+
+
+
+INSERT INTO public.paragraph (id, description, name, theme_id, docs_filenames, max_pol_score, max_chl_score,
+                              max_upr_score, max_global_score)
+VALUES (DEFAULT, 'Устанавливаем python на свою ОС', 'Установка python 3', 1, 'manual.pdf python_guide.doc', null, null,
+        null, null);
+
+INSERT INTO public.paragraph (id, description, name, theme_id, docs_filenames, max_pol_score, max_chl_score,
+                              max_upr_score, max_global_score)
+VALUES (DEFAULT, 'Hello world application!', 'Первое приложение', 1, null, null, null, null, null);
+
+INSERT INTO public.paragraph (id, description, name, theme_id, docs_filenames, max_pol_score, max_chl_score,
+                              max_upr_score, max_global_score)
+VALUES (DEFAULT, 'if/elif/else', 'Основные конструкции языка', 2, null, null, null, null, null);
+
+INSERT INTO public.paragraph (id, description, name, theme_id, docs_filenames, max_pol_score, max_chl_score,
+                              max_upr_score, max_global_score)
+VALUES (DEFAULT, 'While/For/', 'Циклы и рекурсии', 2, 'recursion.pdf', null, null, null, null);
+
+
+
+INSERT INTO public.task (id, name, description, paragraph_id, docs_filenames, max_score)
+VALUES (DEFAULT, 'Первое приложение на Python 3', 'Самостоятельно сделайте консольное приложение HelloWorld.py', 2,
+        null, 4);
+
+
+
+INSERT INTO public.test (id, name, description, paragraph_id, max_pol_rating, max_chl_rating, max_global_rating)
+  VALUES (DEFAULT, 'Основные знания о Python 3', 'Тест на базовые знания об языке Python', 1, null, null, null);
+
+
+INSERT INTO public.question_category (id, category_name)
+VALUES (DEFAULT, 'POL');
+
+INSERT INTO public.question_category (id, category_name)
+VALUES (DEFAULT, 'CHL');
+
+INSERT INTO public.question_category (id, category_name)
+VALUES (DEFAULT, 'UPR');
+
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'С одним правильным ответом');
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'С несколькими правильными ответами');
+
+INSERT INTO public.question_type (id, type_name)
+VALUES (DEFAULT, 'С ответом в виде поля');
+
+
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Python появился в:______', 1, 1, null, 0.5, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Разработчиком языка Python является ', 1, 2, null, 0.5, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Какую платформу поддерживает Python?', 1, 1, null, 0.5, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Официальный сайт Python', 1, 2, null, 0.5, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'От чего появилось название Python?', 1, 1, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Какую типизацию использует Python?', 1, 2, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Расширение файлов, созданных на Python:', 2, 1, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Какие функции есть в Python?', 2, 2, null, 1, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Напишите название библиотеки для разработки приложений с графическим интерфейсом', 3, 1, null, 2, 1);
+
+INSERT INTO public.question (id, question_text, type_id, category_id, docs_filenames, max_score, test_id)
+VALUES (DEFAULT, 'Напишите название фреймворка для создания Web-приложений на Python', 3, 2, null, 2, 1);
+
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '2003 году', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '2006 году', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '1997 году', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 1, '1991 году', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'Александр Лукашенко', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'Уилл Смит', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'Гвидо ван Россум', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 2, 'Билл Гейтс', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'Мобильные приложения', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'Персональные компьютеры', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'Кроссплатформенность', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 3, 'Никакую', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'python.com', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'pythin.ru', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'python.org', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 4, 'python.web', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 5, 'От названия шоу', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 5, 'От подвида змеи', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 6, 'динамическую', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 6, 'строгую', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 7, '.py', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 7, '.cs', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 7, '.pyc', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 7, '.java', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, 'filter()', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, 'zip()', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, 'unzip()', null, false);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 8, 'map()', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 9, 'PyQt 5', null, true);
+
+INSERT INTO public.answer_to_question (id, question_id, answer_text, docs_filenames, is_correct)
+VALUES (DEFAULT, 10, 'Django', null, true);
