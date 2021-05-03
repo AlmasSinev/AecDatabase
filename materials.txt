@@ -1,0 +1,11 @@
+
+https://habr.com/ru/company/ruvds/blog/426413/ - SOLID
+
+https://habr.com/ru/company/piter/blog/438976/ - about Patterns
+
+https://habr.com/ru/company/otus/blog/451516/ - Most popular Patterns in Spring
+
+https://habr.com/ru/post/263033/ - DAO and Repository
+
+https://habr.com/ru/post/171559/ - Specification Pattern
+

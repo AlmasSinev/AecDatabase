@@ -1,0 +1,233 @@
+ALTER TABLE answer_to_question
+    ADD FOREIGN KEY (question_id)
+        REFERENCES question (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE answer_to_task
+    ADD FOREIGN KEY (task_id)
+        REFERENCES task (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE answer_to_task
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE answer_to_task_rating
+    ADD FOREIGN KEY (teacher_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE answer_to_task_rating
+    ADD FOREIGN KEY (answer_to_task_id)
+        REFERENCES answer_to_task (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE comment
+    ADD FOREIGN KEY (user_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE comments_answer_to_task_ratings
+    ADD FOREIGN KEY (comment_id)
+        REFERENCES comment (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE comments_answer_to_task_ratings
+    ADD FOREIGN KEY (answer_to_task_rating_id)
+        REFERENCES answer_to_task_rating (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE comments_answers_to_task
+    ADD FOREIGN KEY (comment_id)
+        REFERENCES comment (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE comments_answers_to_task
+    ADD FOREIGN KEY (answer_to_task_id)
+        REFERENCES answer_to_task (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE course
+    ADD FOREIGN KEY (teacher_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE course
+    ADD FOREIGN KEY (specialization_id)
+        REFERENCES specialization (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE course_rating
+    ADD FOREIGN KEY (course_id)
+        REFERENCES course (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE course_rating
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE document
+    ADD FOREIGN KEY (teacher_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE forum
+    ADD FOREIGN KEY (course_id)
+        REFERENCES course (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE message
+    ADD FOREIGN KEY (forum_id)
+        REFERENCES forum (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE message
+    ADD FOREIGN KEY (user_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE paragraph
+    ADD FOREIGN KEY (theme_id)
+        REFERENCES theme (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE paragraph_rating
+    ADD FOREIGN KEY (paragraph_id)
+        REFERENCES paragraph (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE paragraph_rating
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE question
+    ADD FOREIGN KEY (type_id)
+        REFERENCES question_type (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE question
+    ADD FOREIGN KEY (category_id)
+        REFERENCES question_category (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE question
+    ADD FOREIGN KEY (test_id)
+        REFERENCES test (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE student_test_rating
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE student_test_rating
+    ADD FOREIGN KEY (test_id)
+        REFERENCES test (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE students_courses
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE students_courses
+    ADD FOREIGN KEY (course_id)
+        REFERENCES course (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE students_questions_answers
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE students_questions_answers
+    ADD FOREIGN KEY (question_id)
+        REFERENCES question (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE students_questions_answers
+    ADD FOREIGN KEY (answer_id)
+        REFERENCES answer_to_question (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE task
+    ADD FOREIGN KEY (paragraph_id)
+        REFERENCES paragraph (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE test
+    ADD FOREIGN KEY (paragraph_id)
+        REFERENCES paragraph (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE theme
+    ADD FOREIGN KEY (course_id)
+        REFERENCES course (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE theme_rating
+    ADD FOREIGN KEY (theme_id)
+        REFERENCES theme (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE theme_rating
+    ADD FOREIGN KEY (student_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE user_roles
+    ADD FOREIGN KEY (user_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE users_specializations
+    ADD FOREIGN KEY (user_id)
+        REFERENCES users (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;
+
+ALTER TABLE users_specializations
+    ADD FOREIGN KEY (specialization_id)
+        REFERENCES specialization (id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE ;

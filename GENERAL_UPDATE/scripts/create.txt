@@ -1,0 +1,491 @@
+create table users
+(
+	id serial not null,
+	firstname varchar not null,
+	surname varchar not null,
+	email varchar not null,
+	passwd varchar not null,
+	birthday date
+);
+
+create unique index users_email_uindex
+	on users (email);
+
+create unique index users_id_uindex
+	on users (id);
+
+alter table users
+	add constraint users_pk
+		primary key (id);
+
+
+
+create table user_roles
+(
+	id serial not null,
+	role varchar,
+	user_id int
+);
+
+create unique index user_roles_id_uindex
+	on user_roles (id);
+
+alter table user_roles
+	add constraint user_roles_pk
+		primary key (id);
+
+
+
+create table document
+(
+	id serial not null,
+	doc_code varchar not null,
+	is_taken bool default false,
+	teacher_id int
+);
+
+create unique index document_id_uindex
+	on document (id);
+
+alter table document
+	add constraint document_pk
+		primary key (id);
+
+
+
+create table specialization
+(
+	id serial not null,
+	name varchar
+);
+
+create unique index specialization_id_uindex
+	on specialization (id);
+
+alter table specialization
+	add constraint specialization_pk
+		primary key (id);
+
+
+
+create table users_specializations
+(
+	id serial not null,
+	user_id int not null,
+	specialization_id int not null
+);
+
+create unique index users_specializations_id_uindex
+	on users_specializations (id);
+  alter table users_specializations
+
+	add constraint users_specializations_pk
+		primary key (id);
+
+
+
+create table course
+(
+	id serial not null,
+	name varchar,
+	teacher_id int not null,
+	description varchar,
+	level int check ( level > 0 and level < 9 ),
+	specialization_id int
+);
+
+create unique index course_id_uindex
+	on course (id);
+
+alter table course
+	add constraint course_pk
+		primary key (id);
+
+
+
+create table forum
+(
+	id serial not null,
+	course_id int,
+	name varchar,
+	description varchar,
+	create_date timestamptz
+);
+
+create unique index forum_id_uindex
+	on forum (id);
+
+alter table forum
+	add constraint forum_pk
+		primary key (id);
+
+
+
+create table message
+(
+	id serial not null,
+	text varchar not null,
+	forum_id int,
+	user_id int,
+	send_date timestamptz
+);
+
+create unique index message_id_uindex
+	on message (id);
+
+alter table message
+	add constraint message_pk
+		primary key (id);
+
+
+create table students_courses
+(
+	id serial not null,
+	student_id int,
+	course_id int
+);
+
+create unique index students_courses_id_uindex
+	on students_courses (id);
+
+alter table students_courses
+	add constraint students_courses_pk
+		primary key (id);
+
+
+
+create table theme
+(
+	id serial not null,
+	name varchar,
+	description varchar,
+	course_id int,
+	docs_filenames varchar
+);
+
+create unique index theme_id_uindex
+	on theme (id);
+
+alter table theme
+	add constraint theme_pk
+		primary key (id);
+
+
+
+create table course_rating
+(
+	id serial not null,
+	student_id int not null,
+	course_id int not null,
+	pol_score double precision,
+	chl_score double precision,
+	upr_score double precision,
+	global_score double precision,
+	max_pol_score double precision,
+	max_chl_score double precision,
+	max_upr_score double precision,
+	max_global_score double precision
+);
+
+create unique index course_rating_id_uindex
+	on course_rating (id);
+
+alter table course_rating
+	add constraint course_rating_pk
+		primary key (id);
+
+
+
+create table theme_rating
+(
+	id serial not null,
+	student_id int not null,
+	course_id int not null,
+	pol_score double precision,
+	chl_score double precision,
+	upr_score double precision,
+	global_score double precision,
+	max_pol_score double precision,
+	max_chl_score double precision,
+	max_upr_score double precision,
+	max_global_score double precision
+);
+
+create unique index theme_rating_id_uindex
+  on theme_rating (id);
+
+alter table theme_rating
+  add constraint theme_rating_pk
+    primary key (id);
+
+
+
+create table paragraph
+(
+	id serial not null,
+	description varchar,
+	name varchar,
+	theme_id int,
+	docs_filenames varchar
+);
+
+create unique index paragraph_id_uindex
+	on paragraph (id);
+
+create unique index paragraph_id_uindex_2
+	on paragraph (id);
+
+alter table paragraph
+	add constraint paragraph_pk
+		primary key (id);
+
+
+
+create table paragraph_rating
+(
+    id serial not null,
+    student_id int not null,
+    paragraph_id int not null,
+    pol_score double precision,
+    chl_score double precision,
+    upr_score double precision,
+    global_score double precision,
+    max_pol_score double precision,
+    max_chl_score double precision,
+    max_upr_score double precision,
+    max_global_score double precision
+);
+
+create unique index paragraph_rating_id_uindex
+    on paragraph_rating (id);
+
+alter table paragraph_rating
+    add constraint paragraph_rating_pk
+        primary key (id);
+
+
+
+create table task
+(
+	id serial not null,
+	name varchar,
+	description varchar,
+	paragraph_id int,
+	docs_filenames varchar,
+	max_score double precision
+);
+
+create unique index task_id_uindex
+	on task (id);
+
+alter table task
+	add constraint task_pk
+		primary key (id);
+
+
+
+create table answer_to_task
+(
+	id serial not null,
+	task_id int not null,
+	student_id int not null,
+	answer_date timestamptz,
+	docs_filenames varchar
+);
+
+create unique index answer_to_task_id_uindex
+	on answer_to_task (id);
+
+alter table answer_to_task
+	add constraint answer_to_task_pk
+		primary key (id);
+
+
+
+create table comment
+(
+	id serial not null,
+	user_id int not null,
+	text varchar
+);
+
+create unique index comment_id_uindex
+	on comment (id);
+
+alter table comment
+	add constraint comment_pk
+		primary key (id);
+
+
+
+create table comments_answers_to_task
+(
+	id serial not null,
+	answer_to_task_id int not null,
+	comment_id int not null
+);
+
+create unique index comments_answers_to_task_id_uindex
+	on comments_answers_to_task (id);
+
+alter table comments_answers_to_task
+	add constraint comments_answers_to_task_pk
+		primary key (id);
+
+
+
+create table answer_to_task_rating
+(
+	id serial not null,
+	teacher_id int not null,
+	rating_date timestamptz,
+	upr_score double precision,
+	answer_to_task_id int not null
+);
+
+create unique index answer_to_task_rating_id_uindex
+	on answer_to_task_rating (id);
+
+alter table answer_to_task_rating
+	add constraint answer_to_task_rating_pk
+		primary key (id);
+
+
+
+create table comments_answer_to_task_ratings
+(
+	id serial not null,
+	comment_id int not null,
+	answer_to_task_rating_id int not null
+);
+
+create unique index comments_answer_to_task_ratings_id_uindex
+	on comments_answer_to_task_ratings (id);
+
+alter table comments_answer_to_task_ratings
+	add constraint comments_answer_to_task_ratings_pk
+		primary key (id);
+
+
+
+create table test
+(
+	id serial not null,
+	name varchar,
+	description varchar,
+	paragraph_id int,
+	max_pol_rating double precision,
+	max_chl_rating double precision,
+	max_global_rating double precision
+);
+
+create unique index test_id_uindex
+	on test (id);
+
+alter table test
+	add constraint test_pk
+		primary key (id);
+
+
+
+create table student_test_rating
+(
+	id serial not null,
+	student_id int not null,
+	test_id int not null,
+	pol_score double precision,
+	chl_score double precision,
+	global_score double precision
+);
+
+create unique index student_test_rating_id_uindex
+	on student_test_rating (id);
+
+alter table student_test_rating
+	add constraint student_test_rating_pk
+		primary key (id);
+
+
+
+create table question_category
+(
+	id serial not null,
+	category_name varchar
+);
+
+create unique index question_category_id_uindex
+	on question_category (id);
+
+alter table question_category
+	add constraint question_category_pk
+		primary key (id);
+
+
+
+create table question_type
+(
+	id serial not null,
+	type_name varchar
+);
+
+create unique index question_type_id_uindex
+	on question_type (id);
+
+alter table question_type
+	add constraint question_type_pk
+		primary key (id);
+
+
+
+create table question
+(
+	id serial not null,
+	question_text varchar,
+	type_id int default 1 not null,
+	category_id int default 1 not null,
+	docs_filenames varchar,
+	max_score double precision,
+  test_id int not null
+);
+
+create unique index question_id_uindex
+	on question (id);
+
+alter table question
+	add constraint question_pk
+		primary key (id);
+
+
+
+create table answer_to_question
+(
+	id serial not null,
+	question_id int not null,
+	answer_text varchar,
+	docs_filenames varchar,
+	is_correct boolean
+);
+
+create unique index answer_to_question_id_uindex
+	on answer_to_question (id);
+
+alter table answer_to_question
+	add constraint answer_to_question_pk
+		primary key (id);
+
+
+
+create table students_questions_answers
+(
+	id serial not null,
+	student_id int not null,
+	question_id int not null,
+	answer_id int not null
+);
+
+create unique index students_questions_answers_id_uindex
+	on students_questions_answers (id);
+
+alter table students_questions_answers
+	add constraint students_questions_answers_pk
+		primary key (id);
